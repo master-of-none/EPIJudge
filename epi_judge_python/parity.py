@@ -3,10 +3,15 @@ from test_framework import generic_test
 
 def parity(x: int) -> int:
     # TODO - you fill in here.
+    # result = 0
+    # while x:
+    #     result ^= x & 1
+    #     x >>= 1
+    
     result = 0
     while x:
-        result ^= x & 1
-        x >>= 1
+        result ^= 1
+        x &= x - 1
 
     return result
 
